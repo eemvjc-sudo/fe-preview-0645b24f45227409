@@ -6,34 +6,87 @@
       "unit": "commander",
       "key": "nexx.commander",
       "category": "commander",
-      "source_render": "factions3d/mech_v2/Axiom/AxiomCommander.glb",
+      "source_render": "factions3d/mech_v2/work/Axiom_orig.jpg",
+      "quality": "hero",
       "lods": [
         {
           "lod": 0,
           "file": "commander_lod0.glb",
           "path": "commander/commander_lod0.glb",
-          "texture_px": 2048,
-          "tris": 15000,
-          "bytes": 3512200
+          "tris": 50000,
+          "bytes": 4524744,
+          "texture_px": 2048
         },
         {
           "lod": 1,
           "file": "commander_lod1.glb",
           "path": "commander/commander_lod1.glb",
-          "texture_px": 1024,
-          "tris": 7488,
-          "bytes": 1999632
+          "tris": 20000,
+          "bytes": 1591324,
+          "texture_px": 1024
         },
         {
           "lod": 2,
           "file": "commander_lod2.glb",
           "path": "commander/commander_lod2.glb",
-          "texture_px": 512,
-          "tris": 2256,
-          "bytes": 610736
+          "tris": 7000,
+          "bytes": 661844,
+          "texture_px": 512
         }
       ],
-      "preview": "commander_lod0_preview.png"
+      "textures": [
+        "baseColor",
+        "normal",
+        "metallicRoughness",
+        "emissive"
+      ],
+      "texture_format": "image/webp (EXT_texture_webp)",
+      "skeleton": [
+        "head",
+        "forearm.L",
+        "upper_arm.L",
+        "forearm.R",
+        "upper_arm.R",
+        "chest",
+        "spine",
+        "foot.L",
+        "shin.L",
+        "thigh.L",
+        "foot.R",
+        "shin.R",
+        "thigh.R",
+        "pelvis",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "build",
+          "duration_s": 1.633
+        },
+        {
+          "name": "death",
+          "duration_s": 1.533
+        },
+        {
+          "name": "fire",
+          "duration_s": 0.533
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033
+        },
+        {
+          "name": "walk",
+          "duration_s": 1.1
+        }
+      ],
+      "preview": "commander_lod0_preview.png",
+      "hero_preview": "commander_hero.png",
+      "anim_sheet": "commander_anim_sheet.png"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "name": "Final Eradication",
   "short_name": "Fault Line",
   "description": "Play instantly in the browser. No install. Completely free.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#0E0F11",
   "theme_color": "#0E0F11",
