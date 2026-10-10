@@ -1,0 +1,39 @@
+{
+  "faction": "vorr",
+  "pipeline": "BiRefNet -> Hunyuan3D-2mini (local CPU, 30 steps, seed 1234, octree 380) -> silhouette align -> 15k-tri decimate + xatlas UV + 2048 projected albedo (metallic/roughness factors) -> gltf-transform simplify LODs",
+  "units": [
+    {
+      "unit": "commander",
+      "key": "vorr.commander",
+      "category": "commander",
+      "source_render": "factions3d/mech_v2/Vex/VexCommander.glb",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "commander_lod0.glb",
+          "path": "commander/commander_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3364352
+        },
+        {
+          "lod": 1,
+          "file": "commander_lod1.glb",
+          "path": "commander/commander_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7486,
+          "bytes": 1761856
+        },
+        {
+          "lod": 2,
+          "file": "commander_lod2.glb",
+          "path": "commander/commander_lod2.glb",
+          "texture_px": 512,
+          "tris": 2606,
+          "bytes": 550016
+        }
+      ],
+      "preview": "commander_lod0_preview.png"
+    }
+  ]
+}
