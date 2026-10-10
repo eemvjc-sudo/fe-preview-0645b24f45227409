@@ -87,6 +87,534 @@
       "preview": "commander_lod0_preview.png",
       "hero_preview": "commander_hero.png",
       "anim_sheet": "commander_anim_sheet.png"
+    },
+    {
+      "unit": "optic",
+      "key": "nexx.optic",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/01_optic.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "optic_lod0.glb",
+          "path": "optic/optic_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3225644
+        },
+        {
+          "lod": 1,
+          "file": "optic_lod1.glb",
+          "path": "optic/optic_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 1829404
+        },
+        {
+          "lod": 2,
+          "file": "optic_lod2.glb",
+          "path": "optic/optic_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 587128
+        }
+      ],
+      "preview": "optic_lod0_preview.png"
+    },
+    {
+      "unit": "reticle",
+      "key": "nexx.reticle",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/05_reticle.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "reticle_lod0.glb",
+          "path": "reticle/reticle_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3502584
+        },
+        {
+          "lod": 1,
+          "file": "reticle_lod1.glb",
+          "path": "reticle/reticle_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 2009372
+        },
+        {
+          "lod": 2,
+          "file": "reticle_lod2.glb",
+          "path": "reticle/reticle_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 633104
+        }
+      ],
+      "preview": "reticle_lod0_preview.png"
+    },
+    {
+      "unit": "marklight",
+      "key": "nexx.marklight",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/09_marklight.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "marklight_lod0.glb",
+          "path": "marklight/marklight_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3679200
+        },
+        {
+          "lod": 1,
+          "file": "marklight_lod1.glb",
+          "path": "marklight/marklight_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 2213084
+        },
+        {
+          "lod": 2,
+          "file": "marklight_lod2.glb",
+          "path": "marklight/marklight_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 691856
+        }
+      ],
+      "preview": "marklight_lod0_preview.png"
+    },
+    {
+      "unit": "vernier",
+      "key": "nexx.vernier",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/06_vernier.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "vernier_lod0.glb",
+          "path": "vernier/vernier_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3407764
+        },
+        {
+          "lod": 1,
+          "file": "vernier_lod1.glb",
+          "path": "vernier/vernier_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 1919196
+        },
+        {
+          "lod": 2,
+          "file": "vernier_lod2.glb",
+          "path": "vernier/vernier_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 611688
+        }
+      ],
+      "preview": "vernier_lod0_preview.png"
+    },
+    {
+      "unit": "gnomon",
+      "key": "nexx.gnomon",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/07_gnomon.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "gnomon_lod0.glb",
+          "path": "gnomon/gnomon_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3491268
+        },
+        {
+          "lod": 1,
+          "file": "gnomon_lod1.glb",
+          "path": "gnomon/gnomon_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 1987060
+        },
+        {
+          "lod": 2,
+          "file": "gnomon_lod2.glb",
+          "path": "gnomon/gnomon_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 617088
+        }
+      ],
+      "preview": "gnomon_lod0_preview.png"
+    },
+    {
+      "unit": "flicker",
+      "key": "nexx.flicker",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/02_flicker.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "flicker_lod0.glb",
+          "path": "flicker/flicker_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3526152
+        },
+        {
+          "lod": 1,
+          "file": "flicker_lod1.glb",
+          "path": "flicker/flicker_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 1975516
+        },
+        {
+          "lod": 2,
+          "file": "flicker_lod2.glb",
+          "path": "flicker/flicker_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 624168
+        }
+      ],
+      "preview": "flicker_lod0_preview.png"
+    },
+    {
+      "unit": "lumen",
+      "key": "nexx.lumen",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/03_lumen.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "lumen_lod0.glb",
+          "path": "lumen/lumen_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3429028
+        },
+        {
+          "lod": 1,
+          "file": "lumen_lod1.glb",
+          "path": "lumen/lumen_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 1917188
+        },
+        {
+          "lod": 2,
+          "file": "lumen_lod2.glb",
+          "path": "lumen/lumen_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 604568
+        }
+      ],
+      "preview": "lumen_lod0_preview.png"
+    },
+    {
+      "unit": "quadrant",
+      "key": "nexx.quadrant",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/04_quadrant.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "quadrant_lod0.glb",
+          "path": "quadrant/quadrant_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3517232
+        },
+        {
+          "lod": 1,
+          "file": "quadrant_lod1.glb",
+          "path": "quadrant/quadrant_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 1849788
+        },
+        {
+          "lod": 2,
+          "file": "quadrant_lod2.glb",
+          "path": "quadrant/quadrant_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 582216
+        }
+      ],
+      "preview": "quadrant_lod0_preview.png"
+    },
+    {
+      "unit": "arc",
+      "key": "nexx.arc",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/06_arc.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "arc_lod0.glb",
+          "path": "arc/arc_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3747116
+        },
+        {
+          "lod": 1,
+          "file": "arc_lod1.glb",
+          "path": "arc/arc_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 2168100
+        },
+        {
+          "lod": 2,
+          "file": "arc_lod2.glb",
+          "path": "arc/arc_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 676008
+        }
+      ],
+      "preview": "arc_lod0_preview.png"
+    },
+    {
+      "unit": "scribe",
+      "key": "nexx.scribe",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/07_scribe.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "scribe_lod0.glb",
+          "path": "scribe/scribe_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3362844
+        },
+        {
+          "lod": 1,
+          "file": "scribe_lod1.glb",
+          "path": "scribe/scribe_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 2096072
+        },
+        {
+          "lod": 2,
+          "file": "scribe_lod2.glb",
+          "path": "scribe/scribe_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 674552
+        }
+      ],
+      "preview": "scribe_lod0_preview.png"
+    },
+    {
+      "unit": "geophone",
+      "key": "nexx.geophone",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/08_geophone.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "geophone_lod0.glb",
+          "path": "geophone/geophone_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3777652
+        },
+        {
+          "lod": 1,
+          "file": "geophone_lod1.glb",
+          "path": "geophone/geophone_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 2203044
+        },
+        {
+          "lod": 2,
+          "file": "geophone_lod2.glb",
+          "path": "geophone/geophone_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 677784
+        }
+      ],
+      "preview": "geophone_lod0_preview.png"
+    },
+    {
+      "unit": "surveyor",
+      "key": "nexx.surveyor",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/01_surveyor.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "surveyor_lod0.glb",
+          "path": "surveyor/surveyor_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 4008740
+        },
+        {
+          "lod": 1,
+          "file": "surveyor_lod1.glb",
+          "path": "surveyor/surveyor_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 2217820
+        },
+        {
+          "lod": 2,
+          "file": "surveyor_lod2.glb",
+          "path": "surveyor/surveyor_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 676484
+        }
+      ],
+      "preview": "surveyor_lod0_preview.png"
+    },
+    {
+      "unit": "radian",
+      "key": "nexx.radian",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/02_radian.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "radian_lod0.glb",
+          "path": "radian/radian_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3703908
+        },
+        {
+          "lod": 1,
+          "file": "radian_lod1.glb",
+          "path": "radian/radian_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 2153412
+        },
+        {
+          "lod": 2,
+          "file": "radian_lod2.glb",
+          "path": "radian/radian_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 678660
+        }
+      ],
+      "preview": "radian_lod0_preview.png"
+    },
+    {
+      "unit": "sector",
+      "key": "nexx.sector",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/03_sector.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "sector_lod0.glb",
+          "path": "sector/sector_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3456248
+        },
+        {
+          "lod": 1,
+          "file": "sector_lod1.glb",
+          "path": "sector/sector_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 1908292
+        },
+        {
+          "lod": 2,
+          "file": "sector_lod2.glb",
+          "path": "sector/sector_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 604272
+        }
+      ],
+      "preview": "sector_lod0_preview.png"
+    },
+    {
+      "unit": "trine",
+      "key": "nexx.trine",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/04_trine.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "trine_lod0.glb",
+          "path": "trine/trine_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3764748
+        },
+        {
+          "lod": 1,
+          "file": "trine_lod1.glb",
+          "path": "trine/trine_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 2084068
+        },
+        {
+          "lod": 2,
+          "file": "trine_lod2.glb",
+          "path": "trine/trine_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 651104
+        }
+      ],
+      "preview": "trine_lod0_preview.png"
+    },
+    {
+      "unit": "mast",
+      "key": "nexx.mast",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/05_mast.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "mast_lod0.glb",
+          "path": "mast/mast_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3526552
+        },
+        {
+          "lod": 1,
+          "file": "mast_lod1.glb",
+          "path": "mast/mast_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 1951884
+        },
+        {
+          "lod": 2,
+          "file": "mast_lod2.glb",
+          "path": "mast/mast_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 612684
+        }
+      ],
+      "preview": "mast_lod0_preview.png"
     }
   ]
 }

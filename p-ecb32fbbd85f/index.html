@@ -17,8 +17,8 @@
         if (raw && JSON.parse(raw).reduceMotion) document.documentElement.classList.add("reduce-motion");
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="./assets/index-Do6LWOim.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-tSPXUAWY.css">
+    <script type="module" crossorigin src="./assets/index-BfQTHYyM.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Dgux47QE.css">
   </head>
   <body>
     <form id="gate" class="gate metal" hidden>
@@ -88,7 +88,7 @@
             <picture>
               <source type="image/avif" srcset="./brand/img/emblem-korr-256.avif 256w, ./brand/img/emblem-korr-512.avif 512w" sizes="120px" />
               <source type="image/webp" srcset="./brand/img/emblem-korr-256.webp 256w, ./brand/img/emblem-korr-512.webp 512w" sizes="120px" />
-              <img src="./brand/img/emblem-korr-256.webp" alt="" width="256" height="238" />
+              <img class="glow-korr" src="./brand/img/emblem-korr-256.webp" alt="" width="256" height="256" />
             </picture>
             <div><h3>Korr</h3><p>Fortress. Holds from every angle.</p></div>
           </article>
@@ -97,7 +97,7 @@
             <picture>
               <source type="image/avif" srcset="./brand/img/emblem-arrum-256.avif 256w, ./brand/img/emblem-arrum-512.avif 512w" sizes="120px" />
               <source type="image/webp" srcset="./brand/img/emblem-arrum-256.webp 256w, ./brand/img/emblem-arrum-512.webp 512w" sizes="120px" />
-              <img src="./brand/img/emblem-arrum-256.webp" alt="" width="256" height="238" />
+              <img class="glow-arrum" src="./brand/img/emblem-arrum-256.webp" alt="" width="256" height="256" />
             </picture>
             <div><h3>Arrum</h3><p>Reach and mobility.</p></div>
           </article>
@@ -106,7 +106,7 @@
             <picture>
               <source type="image/avif" srcset="./brand/img/emblem-nexx-256.avif 256w, ./brand/img/emblem-nexx-512.avif 512w" sizes="120px" />
               <source type="image/webp" srcset="./brand/img/emblem-nexx-256.webp 256w, ./brand/img/emblem-nexx-512.webp 512w" sizes="120px" />
-              <img src="./brand/img/emblem-nexx-256.webp" alt="" width="256" height="238" />
+              <img class="glow-nexx" src="./brand/img/emblem-nexx-256.webp" alt="" width="256" height="256" />
             </picture>
             <div><h3>Nexx</h3><p>Information and networks.</p></div>
           </article>
@@ -115,7 +115,7 @@
             <picture>
               <source type="image/avif" srcset="./brand/img/emblem-vorr-256.avif 256w, ./brand/img/emblem-vorr-512.avif 512w" sizes="120px" />
               <source type="image/webp" srcset="./brand/img/emblem-vorr-256.webp 256w, ./brand/img/emblem-vorr-512.webp 512w" sizes="120px" />
-              <img src="./brand/img/emblem-vorr-256.webp" alt="" width="256" height="238" />
+              <img class="glow-vorr" src="./brand/img/emblem-vorr-256.webp" alt="" width="256" height="256" />
             </picture>
             <div><h3>Vorr</h3><p>Strikes from below.</p></div>
           </article>
@@ -202,10 +202,10 @@
       </div>
       <aside class="menu-side metal">
         <h4>Faction · last played</h4>
-        <div class="fac"><img src="./brand/img/emblem-korr-256.webp" alt="" /><div><b>Korr</b><span id="record-korr">No battles yet</span></div></div>
-        <div class="fac"><img src="./brand/img/emblem-arrum-256.webp" alt="" /><div><b>Arrum</b><span id="record-arrum">Not fielded</span></div></div>
-        <div class="fac"><img src="./brand/img/emblem-nexx-256.webp" alt="" /><div><b>Nexx</b><span id="record-nexx">Not fielded</span></div></div>
-        <div class="fac"><img src="./brand/img/emblem-vorr-256.webp" alt="" /><div><b>Vorr</b><span id="record-vorr">Not fielded</span></div></div>
+        <div class="fac"><img class="glow-korr" src="./brand/img/emblem-korr-256.webp" alt="" /><div><b>Korr</b><span id="record-korr">No battles yet</span></div></div>
+        <div class="fac"><img class="glow-arrum" src="./brand/img/emblem-arrum-256.webp" alt="" /><div><b>Arrum</b><span id="record-arrum">Not fielded</span></div></div>
+        <div class="fac"><img class="glow-nexx" src="./brand/img/emblem-nexx-256.webp" alt="" /><div><b>Nexx</b><span id="record-nexx">Not fielded</span></div></div>
+        <div class="fac"><img class="glow-vorr" src="./brand/img/emblem-vorr-256.webp" alt="" /><div><b>Vorr</b><span id="record-vorr">Not fielded</span></div></div>
       </aside>
       <p class="menu-foot"><span id="menu-gfx">Checking the adapter…</span><span>0.1.0 · public test</span></p>
     </section>
@@ -231,10 +231,10 @@
           </div>
         </label>
         <div class="faction-pick" id="lobby-factions">
-          <button type="button" data-pick="korr"><img src="./brand/img/emblem-korr-256.webp" alt="" /><span>Korr</span></button>
-          <button type="button" data-pick="arrum"><img src="./brand/img/emblem-arrum-256.webp" alt="" /><span>Arrum</span></button>
-          <button type="button" data-pick="nexx"><img src="./brand/img/emblem-nexx-256.webp" alt="" /><span>Nexx</span></button>
-          <button type="button" data-pick="vorr"><img src="./brand/img/emblem-vorr-256.webp" alt="" /><span>Vorr</span></button>
+          <button type="button" data-pick="korr"><img class="glow-korr" src="./brand/img/emblem-korr-256.webp" alt="" /><span>Korr</span></button>
+          <button type="button" data-pick="arrum"><img class="glow-arrum" src="./brand/img/emblem-arrum-256.webp" alt="" /><span>Arrum</span></button>
+          <button type="button" data-pick="nexx"><img class="glow-nexx" src="./brand/img/emblem-nexx-256.webp" alt="" /><span>Nexx</span></button>
+          <button type="button" data-pick="vorr"><img class="glow-vorr" src="./brand/img/emblem-vorr-256.webp" alt="" /><span>Vorr</span></button>
         </div>
         <div id="lobby-seats" class="seat-row"></div>
         <p class="relay">Checking the relay…</p>
@@ -346,8 +346,8 @@
         <p class="eyebrow">Twin Ridges</p>
         <h2>Loading match</h2>
         <div class="load-emblems">
-          <img src="./brand/img/emblem-korr-256.webp" alt="Korr" />
-          <img src="./brand/img/emblem-arrum-256.webp" alt="Arrum" />
+          <img class="glow-korr" src="./brand/img/emblem-korr-256.webp" alt="Korr" width="256" height="256" />
+          <img class="glow-arrum" src="./brand/img/emblem-arrum-256.webp" alt="Arrum" width="256" height="256" />
         </div>
         <p id="load-stage" class="stage">Checking the adapter</p>
         <div class="load-meter"><i id="load-bar"></i></div>
@@ -412,7 +412,7 @@
           </div>
           <section class="sel metal" id="select">
             <div class="sel-accent" id="sel-faction"></div>
-            <img id="sel-emblem" alt="" width="148" height="138" src="./brand/img/emblem-korr-256.webp" />
+            <img id="sel-emblem" class="glow-korr" alt="" width="148" height="148" src="./brand/img/emblem-korr-256.webp" />
             <div class="sel-copy">
               <h4 id="sel-title">No selection</h4>
               <p id="sel-detail">Left-click a unit. Drag a box for a group.</p>
@@ -464,8 +464,8 @@
             <p id="end-detail">Korr holds the ridge</p>
             <p class="end-time" id="end-time">0:00</p>
             <div class="end-emblems">
-              <img src="./brand/img/emblem-korr-256.webp" alt="" />
-              <img src="./brand/img/emblem-arrum-256.webp" alt="" />
+              <img class="glow-korr" src="./brand/img/emblem-korr-256.webp" alt="" width="256" height="256" />
+              <img class="glow-arrum" src="./brand/img/emblem-arrum-256.webp" alt="" width="256" height="256" />
             </div>
             <div class="btns">
               <button type="button" class="btn btn-primary" id="end-rematch">Rematch</button>
@@ -479,7 +479,7 @@
     <aside id="unit-card" class="unit-card" hidden>
       <div class="unit-plate metal">
         <div class="sel-accent" id="card-accent"></div>
-        <img id="card-emblem" alt="" width="120" height="112" />
+        <img id="card-emblem" alt="" width="120" height="120" />
         <div>
           <p class="eyebrow" id="card-faction"></p>
           <h3 id="card-name"></h3>
