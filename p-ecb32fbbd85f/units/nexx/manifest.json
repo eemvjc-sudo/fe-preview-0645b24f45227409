@@ -14,7 +14,7 @@
           "file": "commander_lod0.glb",
           "path": "commander/commander_lod0.glb",
           "tris": 50000,
-          "bytes": 4524744,
+          "bytes": 1796892,
           "texture_px": 2048
         },
         {
@@ -22,7 +22,7 @@
           "file": "commander_lod1.glb",
           "path": "commander/commander_lod1.glb",
           "tris": 20000,
-          "bytes": 1591324,
+          "bytes": 753660,
           "texture_px": 1024
         },
         {
@@ -30,7 +30,7 @@
           "file": "commander_lod2.glb",
           "path": "commander/commander_lod2.glb",
           "tris": 7000,
-          "bytes": 661844,
+          "bytes": 343224,
           "texture_px": 512
         }
       ],
@@ -40,7 +40,7 @@
         "metallicRoughness",
         "emissive"
       ],
-      "texture_format": "image/webp (EXT_texture_webp)",
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
       "skeleton": [
         "head",
         "forearm.L",
@@ -61,32 +61,47 @@
       "animations": [
         {
           "name": "build",
-          "duration_s": 1.633
+          "duration_s": 1.633,
+          "loop": true
         },
         {
           "name": "death",
-          "duration_s": 1.533
+          "duration_s": 1.533,
+          "loop": false
         },
         {
           "name": "fire",
-          "duration_s": 0.533
+          "duration_s": 0.533,
+          "loop": false
         },
         {
           "name": "idle",
-          "duration_s": 2.033
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "run",
+          "duration_s": 0.667,
+          "stride_m": 1.018,
+          "ref_speed_mps": 4.228,
+          "loop": true
         },
         {
           "name": "turn",
-          "duration_s": 1.033
+          "duration_s": 1.033,
+          "loop": true
         },
         {
           "name": "walk",
-          "duration_s": 1.1
+          "duration_s": 1.1,
+          "stride_m": 0.636,
+          "ref_speed_mps": 0.962,
+          "loop": true
         }
       ],
       "preview": "commander_lod0_preview.png",
       "hero_preview": "commander_hero.png",
-      "anim_sheet": "commander_anim_sheet.png"
+      "turntable_sheet": "commander_turntable.png"
     },
     {
       "unit": "optic",
