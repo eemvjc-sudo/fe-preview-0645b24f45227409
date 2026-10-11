@@ -1,0 +1,42 @@
+id,kind,x_m,z_m,side,note
+1,home_small,234,536,W,West Gate home ring
+2,home_small,186,536,W,West Gate home ring
+3,home_small,186,488,W,West Gate home ring
+4,home_small,234,488,W,West Gate home ring
+5,natural_std,364,151,W,North Shelf expansion
+6,natural_std,320,159,W,North Shelf expansion
+7,natural_std,336,116,W,North Shelf expansion
+8,natural_std,396,952,W,South Bench expansion
+9,natural_std,354,968,W,South Bench expansion
+10,natural_std,361,924,W,South Bench expansion
+11,lane_std,521,444,W,"west centre lane, north of the road"
+12,lane_std,568,614,W,"west centre lane, south of the wash"
+13,contested_std,659,445,W,mid-valley north
+14,contested_std,702,524,W,mid-valley between road and playa
+15,contested_std,655,624,W,mid-valley south flat
+16,rich_centre,732,496,W,"playa approach, north"
+17,rich_centre,718,626,W,"playa approach, south"
+18,ridge_seam,548,300,W,North Hogback crest seam
+19,ridge_seam,624,338,W,North Hogback scarp seam
+20,ridge_seam,612,758,W,South Hogback crest seam
+21,home_small,1302,536,E,East Gate home ring
+22,home_small,1350,536,E,East Gate home ring
+23,home_small,1350,488,E,East Gate home ring
+24,home_small,1302,488,E,East Gate home ring
+25,natural_std,1172,151,E,North Shelf expansion
+26,natural_std,1216,159,E,North Shelf expansion
+27,natural_std,1200,116,E,North Shelf expansion
+28,natural_std,1140,952,E,South Bench expansion
+29,natural_std,1182,968,E,South Bench expansion
+30,natural_std,1175,924,E,South Bench expansion
+31,lane_std,1015,444,E,"east centre lane, north of the road"
+32,lane_std,968,614,E,"east centre lane, south of the wash"
+33,contested_std,877,445,E,mid-valley north
+34,contested_std,834,524,E,mid-valley between road and playa
+35,contested_std,881,624,E,mid-valley south flat
+36,rich_centre,804,496,E,"playa approach, north"
+37,rich_centre,818,626,E,"playa approach, south"
+38,ridge_seam,988,300,E,North Hogback crest seam
+39,ridge_seam,912,338,E,North Hogback scarp seam
+40,ridge_seam,924,758,E,South Hogback crest seam
+41,rich_centre,768,520,C,"playa north shore, shared"
