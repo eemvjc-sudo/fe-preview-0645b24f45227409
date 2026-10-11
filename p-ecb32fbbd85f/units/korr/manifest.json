@@ -1278,9 +1278,7 @@
           "loop": true
         }
       ],
-      "wheels": [
-        "wheel.L1"
-      ],
+      "wheels": [],
       "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization"
     },
     {
