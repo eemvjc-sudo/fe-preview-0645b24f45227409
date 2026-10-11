@@ -17,8 +17,8 @@
         if (raw && JSON.parse(raw).reduceMotion) document.documentElement.classList.add("reduce-motion");
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="./assets/index-0YQPjucr.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CDrJIGYe.css">
+    <script type="module" crossorigin src="./assets/index-B1Kjna6q.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DcJq78dD.css">
   </head>
   <body>
     <form id="gate" class="gate metal" hidden>
@@ -178,9 +178,8 @@
     </main>
 
     <section id="screen-menu" class="screen menu ember-host" hidden>
-      <div class="menu-capture cap">
-        <b>[ IN-GAME CAPTURE ]</b>
-        <i>Full-bleed engine capture of a launch map · no renders, no concept art</i>
+      <div class="menu-capture" id="menu-capture">
+        <canvas id="menu-scene" aria-hidden="true"></canvas>
       </div>
       <div class="menu-scrim"></div>
       <div class="scanlines" aria-hidden="true"></div>
@@ -496,13 +495,16 @@
     <aside id="unit-card" class="unit-card" hidden>
       <div class="unit-plate metal">
         <div class="sel-accent" id="card-accent"></div>
-        <img id="card-emblem" alt="" width="120" height="120" />
-        <div>
+        <img id="card-emblem" alt="" width="48" height="48" />
+        <div class="unit-copy">
           <p class="eyebrow" id="card-faction"></p>
           <h3 id="card-name"></h3>
           <p id="card-role"></p>
           <dl id="card-stats"></dl>
-          <p id="card-blurb"></p>
+          <details class="unit-more">
+            <summary>Notes</summary>
+            <p id="card-blurb"></p>
+          </details>
         </div>
       </div>
     </aside>
