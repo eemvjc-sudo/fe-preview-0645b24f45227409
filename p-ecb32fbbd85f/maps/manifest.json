@@ -1,0 +1,19 @@
+[
+  {
+    "id": "twin-ridges",
+    "name": "Twin Ridges",
+    "players": "1v1",
+    "size": "1536 × 1024 m",
+    "playable": true,
+    "blurb": "West Gate against East Gate.",
+    "preview": "maps/twin-ridges/preview_oblique.png"
+  },
+  {
+    "id": "benchfall-quarry",
+    "name": "Benchfall Quarry",
+    "players": "8v8",
+    "size": "3072 × 2048 m",
+    "playable": false,
+    "blurb": "Benches and strata. Not in this build."
+  }
+]

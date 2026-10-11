@@ -17,8 +17,8 @@
         if (raw && JSON.parse(raw).reduceMotion) document.documentElement.classList.add("reduce-motion");
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="./assets/index-BfQTHYyM.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Dgux47QE.css">
+    <script type="module" crossorigin src="./assets/index-rXU47p0h.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C0OquKZd.css">
   </head>
   <body>
     <form id="gate" class="gate metal" hidden>
@@ -210,37 +210,54 @@
       <p class="menu-foot"><span id="menu-gfx">Checking the adapter…</span><span>0.1.0 · public test</span></p>
     </section>
 
-    <section id="screen-lobby" class="screen sheet" hidden>
+    <section id="screen-lobby" class="screen sheet lobby is-offline ember-host" hidden>
+      <div class="lobby-bg" aria-hidden="true"></div>
+      <div class="haze lobby-haze" aria-hidden="true"></div>
       <header class="sheet-bar metal">
         <img src="./brand/lockup-horizontal.svg" alt="Final Eradication" width="280" height="40" />
         <p class="credit">Built by LeHogan Studios</p>
         <button type="button" class="btn btn-metal" id="lobby-leave">Back</button>
       </header>
-      <div class="sheet-body">
-        <p class="eyebrow">Private match</p>
-        <h2>Lobby</h2>
-        <p class="lead">A match joined from a shareable link. Twin Ridges, two seats.</p>
-        <div class="lobby-code metal rivet">
-          <span>Code</span>
-          <strong id="lobby-code">----</strong>
-        </div>
-        <label class="field">Link
-          <div class="link-row">
-            <input id="lobby-link" type="text" readonly />
-            <button type="button" class="btn btn-metal" id="lobby-copy">Copy link</button>
+      <div class="sheet-body lobby-body">
+        <div class="lobby-main">
+          <p class="eyebrow" id="lobby-kicker">Skirmish</p>
+          <h2>Lobby</h2>
+          <p class="lead">Two seats. Pick a faction, a team colour, and a map.</p>
+          <div class="lobby-share">
+            <div class="lobby-code metal rivet">
+              <span>Code</span>
+              <strong id="lobby-code">----</strong>
+            </div>
+            <label class="field">Link
+              <div class="link-row">
+                <input id="lobby-link" type="text" readonly />
+                <button type="button" class="btn btn-metal" id="lobby-copy">Copy link</button>
+              </div>
+            </label>
           </div>
-        </label>
-        <div class="faction-pick" id="lobby-factions">
-          <button type="button" data-pick="korr"><img class="glow-korr" src="./brand/img/emblem-korr-256.webp" alt="" /><span>Korr</span></button>
-          <button type="button" data-pick="arrum"><img class="glow-arrum" src="./brand/img/emblem-arrum-256.webp" alt="" /><span>Arrum</span></button>
-          <button type="button" data-pick="nexx"><img class="glow-nexx" src="./brand/img/emblem-nexx-256.webp" alt="" /><span>Nexx</span></button>
-          <button type="button" data-pick="vorr"><img class="glow-vorr" src="./brand/img/emblem-vorr-256.webp" alt="" /><span>Vorr</span></button>
+          <div class="faction-pick" id="lobby-factions">
+            <button type="button" data-pick="korr"><img class="glow-korr" src="./brand/img/emblem-korr-256.webp" alt="" /><span>Korr</span></button>
+            <button type="button" data-pick="arrum"><img class="glow-arrum" src="./brand/img/emblem-arrum-256.webp" alt="" /><span>Arrum</span></button>
+            <button type="button" data-pick="nexx"><img class="glow-nexx" src="./brand/img/emblem-nexx-256.webp" alt="" /><span>Nexx</span></button>
+            <button type="button" data-pick="vorr"><img class="glow-vorr" src="./brand/img/emblem-vorr-256.webp" alt="" /><span>Vorr</span></button>
+          </div>
+          <h3 class="lobby-label">Your team colour</h3>
+          <div id="lobby-teams" class="team-pick"></div>
+          <p class="relay">Online play coming soon</p>
+          <div class="btns lobby-online">
+            <button type="button" class="btn btn-metal" id="lobby-ready">Mark ready</button>
+            <button type="button" class="btn btn-primary" id="lobby-start">Start match</button>
+          </div>
+          <div class="lobby-offline">
+            <button type="button" class="btn btn-primary lobby-vsai" id="lobby-vsai">Start vs AI</button>
+          </div>
         </div>
-        <div id="lobby-seats" class="seat-row"></div>
-        <p class="relay">Checking the relay…</p>
-        <div class="btns">
-          <button type="button" class="btn btn-metal" id="lobby-ready">Mark ready</button>
-          <button type="button" class="btn btn-primary" id="lobby-start">Start match</button>
+        <div class="lobby-stage">
+          <div id="lobby-seats" class="seat-row"></div>
+        </div>
+        <div class="lobby-maps-wrap">
+          <h3 class="lobby-label">Map</h3>
+          <div id="lobby-maps" class="map-pick"></div>
         </div>
       </div>
     </section>
@@ -412,7 +429,7 @@
           </div>
           <section class="sel metal" id="select">
             <div class="sel-accent" id="sel-faction"></div>
-            <img id="sel-emblem" class="glow-korr" alt="" width="148" height="148" src="./brand/img/emblem-korr-256.webp" />
+            <img id="sel-emblem" class="sel-mark glow-korr" alt="" width="128" height="128" src="./brand/emblems/korr.svg" />
             <div class="sel-copy">
               <h4 id="sel-title">No selection</h4>
               <p id="sel-detail">Left-click a unit. Drag a box for a group.</p>
@@ -422,25 +439,25 @@
           <section class="grp metal">
             <h5 id="orders-label">Orders</h5>
             <div class="row" id="orders">
-              <button type="button" class="ord on" data-order="move"><span class="ico" style="--ico:url('./brand/icons/move.svg')"></span><span>Move</span><em>RMB</em></button>
-              <button type="button" class="ord" data-order="attack"><span class="ico" style="--ico:url('./brand/icons/attack.svg')"></span><span>Attack</span><em>RMB</em></button>
-              <button type="button" class="ord" data-order="stop"><span class="ico" style="--ico:url('./brand/icons/stop.svg')"></span><span>Stop</span><em>X</em></button>
-              <button type="button" class="ord dis" data-order="patrol" aria-disabled="true"><span class="ico" style="--ico:url('./brand/icons/patrol.svg')"></span><span>Patrol</span><em>—</em></button>
-              <button type="button" class="ord dis" data-order="guard" aria-disabled="true"><span class="ico" style="--ico:url('./brand/icons/guard.svg')"></span><span>Guard</span><em>—</em></button>
-              <button type="button" class="ord" data-order="build"><span class="ico" style="--ico:url('./brand/icons/build.svg')"></span><span>Build</span><em>B</em></button>
-              <button type="button" class="ord dis" data-order="reclaim" aria-disabled="true"><span class="ico" style="--ico:url('./brand/icons/reclaim.svg')"></span><span>Reclaim</span><em>R</em></button>
+              <button type="button" class="ord on" data-order="move"><img src="./brand/icons/move.svg" alt="" width="24" height="24" /><span>Move</span><em>RMB</em></button>
+              <button type="button" class="ord" data-order="attack"><img src="./brand/icons/attack.svg" alt="" width="24" height="24" /><span>Attack</span><em>RMB</em></button>
+              <button type="button" class="ord" data-order="stop"><img src="./brand/icons/stop.svg" alt="" width="24" height="24" /><span>Stop</span><em>X</em></button>
+              <button type="button" class="ord dis" data-order="patrol" aria-disabled="true"><img src="./brand/icons/patrol.svg" alt="" width="24" height="24" /><span>Patrol</span><em>—</em></button>
+              <button type="button" class="ord dis" data-order="guard" aria-disabled="true"><img src="./brand/icons/guard.svg" alt="" width="24" height="24" /><span>Guard</span><em>—</em></button>
+              <button type="button" class="ord" data-order="build"><img src="./brand/icons/build.svg" alt="" width="24" height="24" /><span>Build</span><em>B</em></button>
+              <button type="button" class="ord dis" data-order="reclaim" aria-disabled="true"><img src="./brand/icons/reclaim.svg" alt="" width="24" height="24" /><span>Reclaim</span><em>R</em></button>
             </div>
             <div class="row" id="buildbar" hidden></div>
           </section>
           <section class="grp metal">
             <h5>Roles</h5>
             <div class="row" id="roles">
-              <button type="button" class="ord" data-role="assault"><span class="ico" style="--ico:url('./brand/icons/role-assault.svg')"></span><span>Assault</span><em></em></button>
-              <button type="button" class="ord" data-role="raider"><span class="ico" style="--ico:url('./brand/icons/role-raider.svg')"></span><span>Raider</span><em></em></button>
-              <button type="button" class="ord" data-role="artillery"><span class="ico" style="--ico:url('./brand/icons/role-artillery.svg')"></span><span>Arty</span><em></em></button>
-              <button type="button" class="ord" data-role="aa"><span class="ico" style="--ico:url('./brand/icons/role-aa.svg')"></span><span>AA</span><em></em></button>
-              <button type="button" class="ord" data-role="scout"><span class="ico" style="--ico:url('./brand/icons/role-scout.svg')"></span><span>Scout</span><em></em></button>
-              <button type="button" class="ord" data-role="constructor"><span class="ico" style="--ico:url('./brand/icons/role-constructor.svg')"></span><span>Build</span><em></em></button>
+              <button type="button" class="ord" data-role="assault"><img src="./brand/icons/role-assault.svg" alt="" width="24" height="24" /><span>Assault</span><em></em></button>
+              <button type="button" class="ord" data-role="raider"><img src="./brand/icons/role-raider.svg" alt="" width="24" height="24" /><span>Raider</span><em></em></button>
+              <button type="button" class="ord" data-role="artillery"><img src="./brand/icons/role-artillery.svg" alt="" width="24" height="24" /><span>Arty</span><em></em></button>
+              <button type="button" class="ord" data-role="aa"><img src="./brand/icons/role-aa.svg" alt="" width="24" height="24" /><span>AA</span><em></em></button>
+              <button type="button" class="ord" data-role="scout"><img src="./brand/icons/role-scout.svg" alt="" width="24" height="24" /><span>Scout</span><em></em></button>
+              <button type="button" class="ord" data-role="constructor"><img src="./brand/icons/role-constructor.svg" alt="" width="24" height="24" /><span>Build</span><em></em></button>
             </div>
           </section>
         </div>
