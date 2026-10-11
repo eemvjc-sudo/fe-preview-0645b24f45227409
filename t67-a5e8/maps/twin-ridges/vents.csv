@@ -1,0 +1,9 @@
+id,x_m,z_m,radius_m,side,note
+1,280,430,8,W,West Gate south flat
+2,280,600,8,W,West Gate north flat
+3,480,200,8,W,North Shelf
+4,480,860,8,W,South Bench
+5,1256,430,8,E,East Gate south flat
+6,1256,600,8,E,East Gate north flat
+7,1056,200,8,E,North Shelf
+8,1056,860,8,E,South Bench

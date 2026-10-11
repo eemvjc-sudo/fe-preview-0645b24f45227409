@@ -1,0 +1,567 @@
+{
+  "faction": "korr",
+  "pipeline": "BiRefNet -> Hunyuan3D-2mini (local CPU, 30 steps, seed 1234, octree 380) -> silhouette align -> 15k-tri decimate + xatlas UV + 2048 projected albedo (metallic/roughness factors) -> gltf-transform simplify LODs",
+  "units": [
+    {
+      "unit": "spotlamp",
+      "key": "korr.spotlamp",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/korr/01_spotlamp.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "spotlamp_lod0.glb",
+          "path": "spotlamp/spotlamp_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3631132
+        },
+        {
+          "lod": 1,
+          "file": "spotlamp_lod1.glb",
+          "path": "spotlamp/spotlamp_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 2012196
+        },
+        {
+          "lod": 2,
+          "file": "spotlamp_lod2.glb",
+          "path": "spotlamp/spotlamp_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 619856
+        }
+      ],
+      "preview": "spotlamp_lod0_preview.png"
+    },
+    {
+      "unit": "grit",
+      "key": "korr.grit",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/korr/02_grit.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "grit_lod0.glb",
+          "path": "grit/grit_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3917652
+        },
+        {
+          "lod": 1,
+          "file": "grit_lod1.glb",
+          "path": "grit/grit_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 2129004
+        },
+        {
+          "lod": 2,
+          "file": "grit_lod2.glb",
+          "path": "grit/grit_lod2.glb",
+          "texture_px": 512,
+          "tris": 2500,
+          "bytes": 656792
+        }
+      ],
+      "preview": "grit_lod0_preview.png"
+    },
+    {
+      "unit": "tamper",
+      "key": "korr.tamper",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/korr/03_tamper.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "tamper_lod0.glb",
+          "path": "tamper/tamper_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3443404
+        },
+        {
+          "lod": 1,
+          "file": "tamper_lod1.glb",
+          "path": "tamper/tamper_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 1867724
+        },
+        {
+          "lod": 2,
+          "file": "tamper_lod2.glb",
+          "path": "tamper/tamper_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 579880
+        }
+      ],
+      "preview": "tamper_lod0_preview.png"
+    },
+    {
+      "unit": "hammerback",
+      "key": "korr.hammerback",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/korr/04_hammerback.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "hammerback_lod0.glb",
+          "path": "hammerback/hammerback_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3682256
+        },
+        {
+          "lod": 1,
+          "file": "hammerback_lod1.glb",
+          "path": "hammerback/hammerback_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 1915980
+        },
+        {
+          "lod": 2,
+          "file": "hammerback_lod2.glb",
+          "path": "hammerback/hammerback_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 594576
+        }
+      ],
+      "preview": "hammerback_lod0_preview.png"
+    },
+    {
+      "unit": "stovepipe",
+      "key": "korr.stovepipe",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/korr/05_stovepipe.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "stovepipe_lod0.glb",
+          "path": "stovepipe/stovepipe_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3254688
+        },
+        {
+          "lod": 1,
+          "file": "stovepipe_lod1.glb",
+          "path": "stovepipe/stovepipe_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 1744196
+        },
+        {
+          "lod": 2,
+          "file": "stovepipe_lod2.glb",
+          "path": "stovepipe/stovepipe_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 548672
+        }
+      ],
+      "preview": "stovepipe_lod0_preview.png"
+    },
+    {
+      "unit": "flakjack",
+      "key": "korr.flakjack",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/korr/06_flakjack.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "flakjack_lod0.glb",
+          "path": "flakjack/flakjack_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3793612
+        },
+        {
+          "lod": 1,
+          "file": "flakjack_lod1.glb",
+          "path": "flakjack/flakjack_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 2034684
+        },
+        {
+          "lod": 2,
+          "file": "flakjack_lod2.glb",
+          "path": "flakjack/flakjack_lod2.glb",
+          "texture_px": 512,
+          "tris": 2282,
+          "bytes": 621968
+        }
+      ],
+      "preview": "flakjack_lod0_preview.png"
+    },
+    {
+      "unit": "riveter",
+      "key": "korr.riveter",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/korr/07_riveter.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "riveter_lod0.glb",
+          "path": "riveter/riveter_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3672804
+        },
+        {
+          "lod": 1,
+          "file": "riveter_lod1.glb",
+          "path": "riveter/riveter_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 1950940
+        },
+        {
+          "lod": 2,
+          "file": "riveter_lod2.glb",
+          "path": "riveter/riveter_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 599264
+        }
+      ],
+      "preview": "riveter_lod0_preview.png"
+    },
+    {
+      "unit": "scrapjaw",
+      "key": "korr.scrapjaw",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/korr/08_scrapjaw.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "scrapjaw_lod0.glb",
+          "path": "scrapjaw/scrapjaw_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 4153060
+        },
+        {
+          "lod": 1,
+          "file": "scrapjaw_lod1.glb",
+          "path": "scrapjaw/scrapjaw_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 2235628
+        },
+        {
+          "lod": 2,
+          "file": "scrapjaw_lod2.glb",
+          "path": "scrapjaw/scrapjaw_lod2.glb",
+          "texture_px": 512,
+          "tris": 2356,
+          "bytes": 679848
+        }
+      ],
+      "preview": "scrapjaw_lod0_preview.png"
+    },
+    {
+      "unit": "mantlet",
+      "key": "korr.mantlet",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/korr/09_mantlet.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "mantlet_lod0.glb",
+          "path": "mantlet/mantlet_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3813720
+        },
+        {
+          "lod": 1,
+          "file": "mantlet_lod1.glb",
+          "path": "mantlet/mantlet_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 2064580
+        },
+        {
+          "lod": 2,
+          "file": "mantlet_lod2.glb",
+          "path": "mantlet/mantlet_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 623968
+        }
+      ],
+      "preview": "mantlet_lod0_preview.png"
+    },
+    {
+      "unit": "haulrig",
+      "key": "korr.haulrig",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/korr/01_haul_rig.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "haulrig_lod0.glb",
+          "path": "haulrig/haulrig_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3705108
+        },
+        {
+          "lod": 1,
+          "file": "haulrig_lod1.glb",
+          "path": "haulrig/haulrig_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 1998292
+        },
+        {
+          "lod": 2,
+          "file": "haulrig_lod2.glb",
+          "path": "haulrig/haulrig_lod2.glb",
+          "texture_px": 512,
+          "tris": 2770,
+          "bytes": 640436
+        }
+      ],
+      "preview": "haulrig_lod0_preview.png"
+    },
+    {
+      "unit": "lookout",
+      "key": "korr.lookout",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/korr/02_lookout.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "lookout_lod0.glb",
+          "path": "lookout/lookout_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3911344
+        },
+        {
+          "lod": 1,
+          "file": "lookout_lod1.glb",
+          "path": "lookout/lookout_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 2119956
+        },
+        {
+          "lod": 2,
+          "file": "lookout_lod2.glb",
+          "path": "lookout/lookout_lod2.glb",
+          "texture_px": 512,
+          "tris": 2772,
+          "bytes": 670920
+        }
+      ],
+      "preview": "lookout_lod0_preview.png"
+    },
+    {
+      "unit": "grinder",
+      "key": "korr.grinder",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/korr/03_grinder.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "grinder_lod0.glb",
+          "path": "grinder/grinder_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3790912
+        },
+        {
+          "lod": 1,
+          "file": "grinder_lod1.glb",
+          "path": "grinder/grinder_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 1995140
+        },
+        {
+          "lod": 2,
+          "file": "grinder_lod2.glb",
+          "path": "grinder/grinder_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 605104
+        }
+      ],
+      "preview": "grinder_lod0_preview.png"
+    },
+    {
+      "unit": "ironclad",
+      "key": "korr.ironclad",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/korr/04_ironclad.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "ironclad_lod0.glb",
+          "path": "ironclad/ironclad_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 3971072
+        },
+        {
+          "lod": 1,
+          "file": "ironclad_lod1.glb",
+          "path": "ironclad/ironclad_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 2114788
+        },
+        {
+          "lod": 2,
+          "file": "ironclad_lod2.glb",
+          "path": "ironclad/ironclad_lod2.glb",
+          "texture_px": 512,
+          "tris": 2692,
+          "bytes": 660232
+        }
+      ],
+      "preview": "ironclad_lod0_preview.png"
+    },
+    {
+      "unit": "thumper",
+      "key": "korr.thumper",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/korr/05_thumper.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "thumper_lod0.glb",
+          "path": "thumper/thumper_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3656456
+        },
+        {
+          "lod": 1,
+          "file": "thumper_lod1.glb",
+          "path": "thumper/thumper_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 1974644
+        },
+        {
+          "lod": 2,
+          "file": "thumper_lod2.glb",
+          "path": "thumper/thumper_lod2.glb",
+          "texture_px": 512,
+          "tris": 2396,
+          "bytes": 615416
+        }
+      ],
+      "preview": "thumper_lod0_preview.png"
+    },
+    {
+      "unit": "flakwagon",
+      "key": "korr.flakwagon",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/korr/06_flak_wagon.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "flakwagon_lod0.glb",
+          "path": "flakwagon/flakwagon_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3859684
+        },
+        {
+          "lod": 1,
+          "file": "flakwagon_lod1.glb",
+          "path": "flakwagon/flakwagon_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 1991940
+        },
+        {
+          "lod": 2,
+          "file": "flakwagon_lod2.glb",
+          "path": "flakwagon/flakwagon_lod2.glb",
+          "texture_px": 512,
+          "tris": 2304,
+          "bytes": 613276
+        }
+      ],
+      "preview": "flakwagon_lod0_preview.png"
+    },
+    {
+      "unit": "cupola",
+      "key": "korr.cupola",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/korr/07_cupola.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "cupola_lod0.glb",
+          "path": "cupola/cupola_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3727096
+        },
+        {
+          "lod": 1,
+          "file": "cupola_lod1.glb",
+          "path": "cupola/cupola_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 1890236
+        },
+        {
+          "lod": 2,
+          "file": "cupola_lod2.glb",
+          "path": "cupola/cupola_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 576448
+        }
+      ],
+      "preview": "cupola_lod0_preview.png"
+    },
+    {
+      "unit": "commander",
+      "key": "korr.commander",
+      "category": "commander",
+      "source_render": "factions3d/mech_v2/Korr/KorrCommander.glb",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "commander_lod0.glb",
+          "path": "commander/commander_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 3942532
+        },
+        {
+          "lod": 1,
+          "file": "commander_lod1.glb",
+          "path": "commander/commander_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7486,
+          "bytes": 2228948
+        },
+        {
+          "lod": 2,
+          "file": "commander_lod2.glb",
+          "path": "commander/commander_lod2.glb",
+          "texture_px": 512,
+          "tris": 2988,
+          "bytes": 672436
+        }
+      ],
+      "preview": "commander_lod0_preview.png"
+    }
+  ]
+}
