@@ -17,8 +17,8 @@
         if (raw && JSON.parse(raw).reduceMotion) document.documentElement.classList.add("reduce-motion");
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="./assets/index-CRxs6Kls.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-74Zx9jlX.css">
+    <script type="module" crossorigin src="./assets/index-MH8R0r3a.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BGSRTzHt.css">
   </head>
   <body>
     <form id="gate" class="gate metal" hidden>
@@ -295,7 +295,8 @@
             <h3>Field manual</h3>
             <ul>
               <li>Left-click selects. Drag a box. Double-click selects the type on screen. Ctrl+double-click selects that type on the map.</li>
-              <li>Right-click the ground to move. Right-click an enemy to attack. Right-drag draws a formation line. Middle-drag and Alt+middle-drag orbit.</li>
+              <li>Right-click the ground to move. Right-click an enemy to attack. Right-drag draws a formation line. Left-click empty ground clears the selection. Middle-drag and Alt+middle-drag orbit.</li>
+              <li>With a builder selected, QWER ASDF ZXCV arm the build grid. While placing, Q and E rotate, Z and X set spacing, and Shift-drag lays a line.</li>
               <li>Q and E turn the camera. While placing, they turn the blueprint. Esc cancels it.</li>
               <li>W A S and the arrows pan. Shift pans faster. Ctrl pans slower. Pinch or the wheel zooms. Tab looks over the map.</li>
               <li>Ctrl+F1 to F4 stores a camera bookmark. F1 to F4 returns to it. D deposits. P pauses. X stops. B builds. R reclaim.</li>
@@ -385,12 +386,16 @@
       </div>
       <canvas id="view"></canvas>
       <div id="drag-box" hidden></div>
+      <svg id="formation-guide" hidden aria-hidden="true"><line id="formation-line" x1="0" y1="0" x2="0" y2="0"></line></svg>
+      <div id="build-readouts"></div>
       <div id="hud" class="hud">
-        <p id="banner" class="banner metal" hidden></p>
-        <p id="controls-hint" class="controls-hint metal" hidden>
-          Right-click the ground to move. Right-drag draws a line. Middle-drag orbits. WASD pans. Tab looks overhead.
-          <button type="button" id="controls-hint-dismiss">Dismiss</button>
-        </p>
+        <div id="field-notes" class="field-notes">
+          <p id="controls-hint" class="controls-hint metal" hidden>
+            Right-click the ground to move. Right-drag draws a line. Left-click empty ground clears the selection. Middle-drag orbits. WASD pans. Tab looks overhead.
+            <button type="button" id="controls-hint-dismiss">Dismiss</button>
+          </p>
+          <p id="banner" class="banner metal" hidden></p>
+        </div>
         <header class="hud-top metal">
           <div class="res">
             <img src="./brand/icons/metal.svg" alt="" width="24" height="24" />
