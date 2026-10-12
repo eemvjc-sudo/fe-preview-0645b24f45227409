@@ -1,0 +1,1366 @@
+{
+  "faction": "nexx",
+  "pipeline": "BiRefNet -> Hunyuan3D-2mini (local CPU, 30 steps, seed 1234, octree 380) -> silhouette align -> 15k-tri decimate + xatlas UV + 2048 projected albedo (metallic/roughness factors) -> gltf-transform simplify LODs",
+  "units": [
+    {
+      "unit": "commander",
+      "key": "nexx.commander",
+      "category": "commander",
+      "source_render": "factions3d/mech_v2/work/Axiom_orig.jpg",
+      "quality": "hero",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "commander_lod0.glb",
+          "path": "commander/commander_lod0.glb",
+          "tris": 50000,
+          "bytes": 1796892,
+          "texture_px": 2048
+        },
+        {
+          "lod": 1,
+          "file": "commander_lod1.glb",
+          "path": "commander/commander_lod1.glb",
+          "tris": 20000,
+          "bytes": 753660,
+          "texture_px": 1024
+        },
+        {
+          "lod": 2,
+          "file": "commander_lod2.glb",
+          "path": "commander/commander_lod2.glb",
+          "tris": 7000,
+          "bytes": 343224,
+          "texture_px": 512
+        }
+      ],
+      "textures": [
+        "baseColor",
+        "normal",
+        "metallicRoughness",
+        "emissive"
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "skeleton": [
+        "head",
+        "forearm.L",
+        "upper_arm.L",
+        "forearm.R",
+        "upper_arm.R",
+        "chest",
+        "spine",
+        "foot.L",
+        "shin.L",
+        "thigh.L",
+        "foot.R",
+        "shin.R",
+        "thigh.R",
+        "pelvis",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "build",
+          "duration_s": 1.633,
+          "loop": true
+        },
+        {
+          "name": "death",
+          "duration_s": 1.533,
+          "loop": false
+        },
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "run",
+          "duration_s": 0.667,
+          "stride_m": 1.018,
+          "ref_speed_mps": 4.228,
+          "loop": true
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        },
+        {
+          "name": "walk",
+          "duration_s": 1.1,
+          "stride_m": 0.636,
+          "ref_speed_mps": 0.962,
+          "loop": true
+        }
+      ],
+      "preview": "commander_lod0_preview.png",
+      "hero_preview": "commander_hero.png",
+      "turntable_sheet": "commander_turntable.png"
+    },
+    {
+      "unit": "optic",
+      "key": "nexx.optic",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/01_optic.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "optic_lod0.glb",
+          "path": "optic/optic_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 460492
+        },
+        {
+          "lod": 1,
+          "file": "optic_lod1.glb",
+          "path": "optic/optic_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 238360
+        },
+        {
+          "lod": 2,
+          "file": "optic_lod2.glb",
+          "path": "optic/optic_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 123864
+        }
+      ],
+      "preview": "optic_lod0_preview.png",
+      "rig": "legged",
+      "skeleton": [
+        "weapon",
+        "chest",
+        "foot.R",
+        "shin.R",
+        "thigh.R",
+        "foot.L",
+        "shin.L",
+        "thigh.L",
+        "pelvis",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "run",
+          "duration_s": 0.667,
+          "loop": true,
+          "stride_m": 0.646,
+          "ref_speed_mps": 2.55
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        },
+        {
+          "name": "walk",
+          "duration_s": 1.1,
+          "loop": true,
+          "stride_m": 0.408,
+          "ref_speed_mps": 0.617
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "legs": [
+        "R",
+        "L"
+      ]
+    },
+    {
+      "unit": "reticle",
+      "key": "nexx.reticle",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/05_reticle.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "reticle_lod0.glb",
+          "path": "reticle/reticle_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 523088
+        },
+        {
+          "lod": 1,
+          "file": "reticle_lod1.glb",
+          "path": "reticle/reticle_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 279620
+        },
+        {
+          "lod": 2,
+          "file": "reticle_lod2.glb",
+          "path": "reticle/reticle_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 147172
+        }
+      ],
+      "preview": "reticle_lod0_preview.png",
+      "rig": "legged",
+      "skeleton": [
+        "weapon",
+        "chest",
+        "foot.L",
+        "shin.L",
+        "thigh.L",
+        "foot.R",
+        "shin.R",
+        "thigh.R",
+        "pelvis",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "run",
+          "duration_s": 0.667,
+          "loop": true,
+          "stride_m": 0.703,
+          "ref_speed_mps": 2.775
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        },
+        {
+          "name": "walk",
+          "duration_s": 1.1,
+          "loop": true,
+          "stride_m": 0.444,
+          "ref_speed_mps": 0.671
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "legs": [
+        "L",
+        "R"
+      ]
+    },
+    {
+      "unit": "marklight",
+      "key": "nexx.marklight",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/09_marklight.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "marklight_lod0.glb",
+          "path": "marklight/marklight_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 585580
+        },
+        {
+          "lod": 1,
+          "file": "marklight_lod1.glb",
+          "path": "marklight/marklight_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 299396
+        },
+        {
+          "lod": 2,
+          "file": "marklight_lod2.glb",
+          "path": "marklight/marklight_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 149368
+        }
+      ],
+      "preview": "marklight_lod0_preview.png",
+      "rig": "legged",
+      "skeleton": [
+        "weapon",
+        "chest",
+        "foot.R",
+        "shin.R",
+        "thigh.R",
+        "foot.L",
+        "shin.L",
+        "thigh.L",
+        "pelvis",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "run",
+          "duration_s": 0.667,
+          "loop": true,
+          "stride_m": 0.703,
+          "ref_speed_mps": 2.775
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        },
+        {
+          "name": "walk",
+          "duration_s": 1.1,
+          "loop": true,
+          "stride_m": 0.444,
+          "ref_speed_mps": 0.671
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "legs": [
+        "R",
+        "L"
+      ]
+    },
+    {
+      "unit": "vernier",
+      "key": "nexx.vernier",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/06_vernier.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "vernier_lod0.glb",
+          "path": "vernier/vernier_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 453288
+        },
+        {
+          "lod": 1,
+          "file": "vernier_lod1.glb",
+          "path": "vernier/vernier_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 236772
+        },
+        {
+          "lod": 2,
+          "file": "vernier_lod2.glb",
+          "path": "vernier/vernier_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 110476
+        }
+      ],
+      "preview": "vernier_lod0_preview.png",
+      "rig": "vehicle",
+      "skeleton": [
+        "turret",
+        "hull",
+        "wheel.L0",
+        "wheel.L1",
+        "wheel.R0",
+        "wheel.R1",
+        "wheel.R2",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "move",
+          "duration_s": 1.033,
+          "loop": true,
+          "ref_speed_mps": 1.289,
+          "wheel_radius_m": 0.205,
+          "tracked": false
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "wheels": [
+        "wheel.L0",
+        "wheel.L1",
+        "wheel.R0",
+        "wheel.R1",
+        "wheel.R2"
+      ]
+    },
+    {
+      "unit": "gnomon",
+      "key": "nexx.gnomon",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/07_gnomon.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "gnomon_lod0.glb",
+          "path": "gnomon/gnomon_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 445804
+        },
+        {
+          "lod": 1,
+          "file": "gnomon_lod1.glb",
+          "path": "gnomon/gnomon_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 217540
+        },
+        {
+          "lod": 2,
+          "file": "gnomon_lod2.glb",
+          "path": "gnomon/gnomon_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 100272
+        }
+      ],
+      "preview": "gnomon_lod0_preview.png",
+      "rig": "vehicle",
+      "skeleton": [
+        "turret",
+        "hull",
+        "wheel.L0",
+        "wheel.R0",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "move",
+          "duration_s": 1.033,
+          "loop": true,
+          "ref_speed_mps": 2.364,
+          "wheel_radius_m": 0.376,
+          "tracked": false
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "wheels": [
+        "wheel.L0",
+        "wheel.R0"
+      ]
+    },
+    {
+      "unit": "flicker",
+      "key": "nexx.flicker",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/02_flicker.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "flicker_lod0.glb",
+          "path": "flicker/flicker_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 534492
+        },
+        {
+          "lod": 1,
+          "file": "flicker_lod1.glb",
+          "path": "flicker/flicker_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 289724
+        },
+        {
+          "lod": 2,
+          "file": "flicker_lod2.glb",
+          "path": "flicker/flicker_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 149132
+        }
+      ],
+      "preview": "flicker_lod0_preview.png",
+      "rig": "legged",
+      "skeleton": [
+        "weapon",
+        "chest",
+        "foot.R",
+        "shin.R",
+        "thigh.R",
+        "foot.L",
+        "shin.L",
+        "thigh.L",
+        "pelvis",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "run",
+          "duration_s": 0.667,
+          "loop": true,
+          "stride_m": 0.703,
+          "ref_speed_mps": 2.775
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        },
+        {
+          "name": "walk",
+          "duration_s": 1.1,
+          "loop": true,
+          "stride_m": 0.444,
+          "ref_speed_mps": 0.671
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "legs": [
+        "R",
+        "L"
+      ]
+    },
+    {
+      "unit": "lumen",
+      "key": "nexx.lumen",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/03_lumen.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "lumen_lod0.glb",
+          "path": "lumen/lumen_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 493140
+        },
+        {
+          "lod": 1,
+          "file": "lumen_lod1.glb",
+          "path": "lumen/lumen_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 264500
+        },
+        {
+          "lod": 2,
+          "file": "lumen_lod2.glb",
+          "path": "lumen/lumen_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 134336
+        }
+      ],
+      "preview": "lumen_lod0_preview.png",
+      "rig": "legged",
+      "skeleton": [
+        "weapon",
+        "chest",
+        "foot.R",
+        "shin.R",
+        "thigh.R",
+        "foot.L",
+        "shin.L",
+        "thigh.L",
+        "pelvis",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "run",
+          "duration_s": 0.667,
+          "loop": true,
+          "stride_m": 0.703,
+          "ref_speed_mps": 2.775
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        },
+        {
+          "name": "walk",
+          "duration_s": 1.1,
+          "loop": true,
+          "stride_m": 0.444,
+          "ref_speed_mps": 0.671
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "legs": [
+        "R",
+        "L"
+      ]
+    },
+    {
+      "unit": "quadrant",
+      "key": "nexx.quadrant",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/04_quadrant.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "quadrant_lod0.glb",
+          "path": "quadrant/quadrant_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 535420
+        },
+        {
+          "lod": 1,
+          "file": "quadrant_lod1.glb",
+          "path": "quadrant/quadrant_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 281200
+        },
+        {
+          "lod": 2,
+          "file": "quadrant_lod2.glb",
+          "path": "quadrant/quadrant_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 147392
+        }
+      ],
+      "preview": "quadrant_lod0_preview.png",
+      "rig": "legged",
+      "skeleton": [
+        "weapon",
+        "chest",
+        "foot.R",
+        "shin.R",
+        "thigh.R",
+        "foot.L",
+        "shin.L",
+        "thigh.L",
+        "pelvis",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "run",
+          "duration_s": 0.667,
+          "loop": true,
+          "stride_m": 0.703,
+          "ref_speed_mps": 2.775
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        },
+        {
+          "name": "walk",
+          "duration_s": 1.1,
+          "loop": true,
+          "stride_m": 0.444,
+          "ref_speed_mps": 0.671
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "legs": [
+        "R",
+        "L"
+      ]
+    },
+    {
+      "unit": "arc",
+      "key": "nexx.arc",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/06_arc.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "arc_lod0.glb",
+          "path": "arc/arc_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 622836
+        },
+        {
+          "lod": 1,
+          "file": "arc_lod1.glb",
+          "path": "arc/arc_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 311320
+        },
+        {
+          "lod": 2,
+          "file": "arc_lod2.glb",
+          "path": "arc/arc_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 152036
+        }
+      ],
+      "preview": "arc_lod0_preview.png",
+      "rig": "legged",
+      "skeleton": [
+        "weapon",
+        "chest",
+        "foot.R",
+        "shin.R",
+        "thigh.R",
+        "foot.L",
+        "shin.L",
+        "thigh.L",
+        "pelvis",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "run",
+          "duration_s": 0.667,
+          "loop": true,
+          "stride_m": 0.703,
+          "ref_speed_mps": 2.775
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        },
+        {
+          "name": "walk",
+          "duration_s": 1.1,
+          "loop": true,
+          "stride_m": 0.444,
+          "ref_speed_mps": 0.671
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "legs": [
+        "R",
+        "L"
+      ]
+    },
+    {
+      "unit": "scribe",
+      "key": "nexx.scribe",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/07_scribe.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "scribe_lod0.glb",
+          "path": "scribe/scribe_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 540456
+        },
+        {
+          "lod": 1,
+          "file": "scribe_lod1.glb",
+          "path": "scribe/scribe_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 284312
+        },
+        {
+          "lod": 2,
+          "file": "scribe_lod2.glb",
+          "path": "scribe/scribe_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 143052
+        }
+      ],
+      "preview": "scribe_lod0_preview.png",
+      "rig": "legged",
+      "skeleton": [
+        "weapon",
+        "chest",
+        "foot.R",
+        "shin.R",
+        "thigh.R",
+        "foot.L",
+        "shin.L",
+        "thigh.L",
+        "pelvis",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "run",
+          "duration_s": 0.667,
+          "loop": true,
+          "stride_m": 0.988,
+          "ref_speed_mps": 3.9
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        },
+        {
+          "name": "walk",
+          "duration_s": 1.1,
+          "loop": true,
+          "stride_m": 0.624,
+          "ref_speed_mps": 0.944
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "legs": [
+        "R",
+        "L"
+      ]
+    },
+    {
+      "unit": "geophone",
+      "key": "nexx.geophone",
+      "category": "field-bots",
+      "source_render": "roster/field-bots/renders/nexx/08_geophone.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "geophone_lod0.glb",
+          "path": "geophone/geophone_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 579216
+        },
+        {
+          "lod": 1,
+          "file": "geophone_lod1.glb",
+          "path": "geophone/geophone_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 290508
+        },
+        {
+          "lod": 2,
+          "file": "geophone_lod2.glb",
+          "path": "geophone/geophone_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 145480
+        }
+      ],
+      "preview": "geophone_lod0_preview.png",
+      "rig": "legged",
+      "skeleton": [
+        "weapon",
+        "chest",
+        "foot.R",
+        "shin.R",
+        "thigh.R",
+        "foot.L",
+        "shin.L",
+        "thigh.L",
+        "pelvis",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "run",
+          "duration_s": 0.667,
+          "loop": true,
+          "stride_m": 0.703,
+          "ref_speed_mps": 2.775
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        },
+        {
+          "name": "walk",
+          "duration_s": 1.1,
+          "loop": true,
+          "stride_m": 0.444,
+          "ref_speed_mps": 0.671
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "legs": [
+        "R",
+        "L"
+      ]
+    },
+    {
+      "unit": "surveyor",
+      "key": "nexx.surveyor",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/01_surveyor.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "surveyor_lod0.glb",
+          "path": "surveyor/surveyor_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 551168
+        },
+        {
+          "lod": 1,
+          "file": "surveyor_lod1.glb",
+          "path": "surveyor/surveyor_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 268396
+        },
+        {
+          "lod": 2,
+          "file": "surveyor_lod2.glb",
+          "path": "surveyor/surveyor_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 130664
+        }
+      ],
+      "preview": "surveyor_lod0_preview.png",
+      "rig": "vehicle",
+      "skeleton": [
+        "turret",
+        "hull",
+        "wheel.L0",
+        "wheel.L1",
+        "wheel.L2",
+        "wheel.R0",
+        "wheel.R1",
+        "wheel.R2",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "move",
+          "duration_s": 1.033,
+          "loop": true,
+          "ref_speed_mps": 1.613,
+          "wheel_radius_m": 0.257,
+          "tracked": false
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "wheels": [
+        "wheel.L0",
+        "wheel.L1",
+        "wheel.L2",
+        "wheel.R0",
+        "wheel.R1",
+        "wheel.R2"
+      ]
+    },
+    {
+      "unit": "radian",
+      "key": "nexx.radian",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/02_radian.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "radian_lod0.glb",
+          "path": "radian/radian_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 574120
+        },
+        {
+          "lod": 1,
+          "file": "radian_lod1.glb",
+          "path": "radian/radian_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 279312
+        },
+        {
+          "lod": 2,
+          "file": "radian_lod2.glb",
+          "path": "radian/radian_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 128336
+        }
+      ],
+      "preview": "radian_lod0_preview.png",
+      "rig": "vehicle",
+      "skeleton": [
+        "turret",
+        "hull",
+        "wheel.L0",
+        "wheel.L1",
+        "wheel.R0",
+        "wheel.R1",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "move",
+          "duration_s": 1.033,
+          "loop": true,
+          "ref_speed_mps": 1.349,
+          "wheel_radius_m": 0.215,
+          "tracked": false
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "wheels": [
+        "wheel.L0",
+        "wheel.L1",
+        "wheel.R0",
+        "wheel.R1"
+      ]
+    },
+    {
+      "unit": "sector",
+      "key": "nexx.sector",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/03_sector.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "sector_lod0.glb",
+          "path": "sector/sector_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 496364
+        },
+        {
+          "lod": 1,
+          "file": "sector_lod1.glb",
+          "path": "sector/sector_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 251436
+        },
+        {
+          "lod": 2,
+          "file": "sector_lod2.glb",
+          "path": "sector/sector_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 110972
+        }
+      ],
+      "preview": "sector_lod0_preview.png",
+      "rig": "vehicle",
+      "skeleton": [
+        "turret",
+        "hull",
+        "track.L",
+        "track.R",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "move",
+          "duration_s": 1.033,
+          "loop": true,
+          "ref_speed_mps": 0.754,
+          "wheel_radius_m": 0.12,
+          "tracked": true
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "wheels": []
+    },
+    {
+      "unit": "trine",
+      "key": "nexx.trine",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/04_trine.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "trine_lod0.glb",
+          "path": "trine/trine_lod0.glb",
+          "texture_px": 2048,
+          "tris": 15000,
+          "bytes": 587816
+        },
+        {
+          "lod": 1,
+          "file": "trine_lod1.glb",
+          "path": "trine/trine_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7500,
+          "bytes": 283388
+        },
+        {
+          "lod": 2,
+          "file": "trine_lod2.glb",
+          "path": "trine/trine_lod2.glb",
+          "texture_px": 512,
+          "tris": 2250,
+          "bytes": 124152
+        }
+      ],
+      "preview": "trine_lod0_preview.png",
+      "rig": "vehicle",
+      "skeleton": [
+        "turret",
+        "hull",
+        "track.L",
+        "track.R",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "move",
+          "duration_s": 1.033,
+          "loop": true,
+          "ref_speed_mps": 0.754,
+          "wheel_radius_m": 0.12,
+          "tracked": true
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "wheels": []
+    },
+    {
+      "unit": "mast",
+      "key": "nexx.mast",
+      "category": "field-vehicles",
+      "source_render": "roster/field-vehicles/renders/nexx/05_mast.png",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "mast_lod0.glb",
+          "path": "mast/mast_lod0.glb",
+          "texture_px": 2048,
+          "tris": 14998,
+          "bytes": 488556
+        },
+        {
+          "lod": 1,
+          "file": "mast_lod1.glb",
+          "path": "mast/mast_lod1.glb",
+          "texture_px": 1024,
+          "tris": 7498,
+          "bytes": 257232
+        },
+        {
+          "lod": 2,
+          "file": "mast_lod2.glb",
+          "path": "mast/mast_lod2.glb",
+          "texture_px": 512,
+          "tris": 2248,
+          "bytes": 121408
+        }
+      ],
+      "preview": "mast_lod0_preview.png",
+      "rig": "vehicle",
+      "skeleton": [
+        "turret",
+        "hull",
+        "wheel.L0",
+        "wheel.L1",
+        "wheel.L2",
+        "wheel.L3",
+        "wheel.R0",
+        "wheel.R1",
+        "wheel.R2",
+        "wheel.R3",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "move",
+          "duration_s": 1.033,
+          "loop": true,
+          "ref_speed_mps": 1.442,
+          "wheel_radius_m": 0.229,
+          "tracked": false
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        }
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "wheels": [
+        "wheel.L0",
+        "wheel.L1",
+        "wheel.L2",
+        "wheel.L3",
+        "wheel.R0",
+        "wheel.R1",
+        "wheel.R2",
+        "wheel.R3"
+      ]
+    }
+  ]
+}

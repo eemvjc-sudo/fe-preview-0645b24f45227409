@@ -1,0 +1,107 @@
+{
+  "faction": "vorr",
+  "pipeline": "BiRefNet -> Hunyuan3D-2mini (local CPU, 30 steps, seed 1234, octree 380) -> silhouette align -> 15k-tri decimate + xatlas UV + 2048 projected albedo (metallic/roughness factors) -> gltf-transform simplify LODs",
+  "units": [
+    {
+      "unit": "commander",
+      "key": "vorr.commander",
+      "category": "commander",
+      "source_render": "factions3d/mech_v2/work/Vex_orig.jpg",
+      "quality": "hero",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "commander_lod0.glb",
+          "path": "commander/commander_lod0.glb",
+          "tris": 50000,
+          "bytes": 1598624,
+          "texture_px": 2048
+        },
+        {
+          "lod": 1,
+          "file": "commander_lod1.glb",
+          "path": "commander/commander_lod1.glb",
+          "tris": 20000,
+          "bytes": 701780,
+          "texture_px": 1024
+        },
+        {
+          "lod": 2,
+          "file": "commander_lod2.glb",
+          "path": "commander/commander_lod2.glb",
+          "tris": 7000,
+          "bytes": 327100,
+          "texture_px": 512
+        }
+      ],
+      "textures": [
+        "baseColor",
+        "normal",
+        "metallicRoughness",
+        "emissive"
+      ],
+      "texture_format": "image/webp (EXT_texture_webp); geometry EXT_meshopt_compression + KHR_mesh_quantization",
+      "skeleton": [
+        "head",
+        "forearm.L",
+        "upper_arm.L",
+        "forearm.R",
+        "upper_arm.R",
+        "chest",
+        "spine",
+        "foot.L",
+        "shin.L",
+        "thigh.L",
+        "foot.R",
+        "shin.R",
+        "thigh.R",
+        "pelvis",
+        "root"
+      ],
+      "animations": [
+        {
+          "name": "build",
+          "duration_s": 1.633,
+          "loop": true
+        },
+        {
+          "name": "death",
+          "duration_s": 1.533,
+          "loop": false
+        },
+        {
+          "name": "fire",
+          "duration_s": 0.533,
+          "loop": false
+        },
+        {
+          "name": "idle",
+          "duration_s": 2.033,
+          "loop": true
+        },
+        {
+          "name": "run",
+          "duration_s": 0.667,
+          "stride_m": 0.675,
+          "ref_speed_mps": 2.807,
+          "loop": true
+        },
+        {
+          "name": "turn",
+          "duration_s": 1.033,
+          "loop": true
+        },
+        {
+          "name": "walk",
+          "duration_s": 1.1,
+          "stride_m": 0.422,
+          "ref_speed_mps": 0.638,
+          "loop": true
+        }
+      ],
+      "preview": "commander_lod0_preview.png",
+      "hero_preview": "commander_hero.png",
+      "turntable_sheet": "commander_turntable.png"
+    }
+  ]
+}
