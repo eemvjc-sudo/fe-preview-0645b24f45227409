@@ -17,8 +17,8 @@
         if (raw && JSON.parse(raw).reduceMotion) document.documentElement.classList.add("reduce-motion");
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="./assets/index-B1Kjna6q.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DcJq78dD.css">
+    <script type="module" crossorigin src="./assets/index-CRxs6Kls.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-74Zx9jlX.css">
   </head>
   <body>
     <form id="gate" class="gate metal" hidden>
@@ -287,14 +287,18 @@
             <input id="set-audio" type="range" min="0" max="100" step="1" />
           </label>
           <label class="check"><input id="set-fps" type="checkbox" checked /> Show frame rate</label>
+          <label class="field">Camera smoothing <span id="set-smooth-val">100</span> ms
+            <input id="set-smooth" type="range" min="40" max="2000" step="10" />
+          </label>
+          <label class="check"><input id="set-zoom-cursor" type="checkbox" /> Zoom out toward the cursor</label>
           <div class="controls-card metal">
             <h3>Field manual</h3>
             <ul>
-              <li>Left-click selects. Drag a box. Double-click selects the type.</li>
-              <li>Right-click the ground to move. Right-click an enemy to attack. Right-drag or Alt-drag orbits. Middle-drag pans. Tab looks overhead.</li>
+              <li>Left-click selects. Drag a box. Double-click selects the type on screen. Ctrl+double-click selects that type on the map.</li>
+              <li>Right-click the ground to move. Right-click an enemy to attack. Right-drag draws a formation line. Middle-drag and Alt+middle-drag orbit.</li>
               <li>Q and E turn the camera. While placing, they turn the blueprint. Esc cancels it.</li>
-              <li>W A S and the arrows pan. Middle-drag and Alt-drag orbit. Pinch or the wheel zooms.</li>
-              <li>D deposits. P pauses. X stops. B builds. R reclaim.</li>
+              <li>W A S and the arrows pan. Shift pans faster. Ctrl pans slower. Pinch or the wheel zooms. Tab looks over the map.</li>
+              <li>Ctrl+F1 to F4 stores a camera bookmark. F1 to F4 returns to it. D deposits. P pauses. X stops. B builds. R reclaim.</li>
             </ul>
           </div>
         </form>
@@ -384,7 +388,7 @@
       <div id="hud" class="hud">
         <p id="banner" class="banner metal" hidden></p>
         <p id="controls-hint" class="controls-hint metal" hidden>
-          Right-click the ground to move. Right-click an enemy to attack. Right-drag orbits. WASD pans. Tab looks overhead.
+          Right-click the ground to move. Right-drag draws a line. Middle-drag orbits. WASD pans. Tab looks overhead.
           <button type="button" id="controls-hint-dismiss">Dismiss</button>
         </p>
         <header class="hud-top metal">
