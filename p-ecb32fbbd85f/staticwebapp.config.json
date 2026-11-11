@@ -1,0 +1,9 @@
+{
+  "globalHeaders": {
+    "X-Robots-Tag": "noindex, nofollow, noarchive"
+  },
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/assets/*", "/robots.txt", "/units/*", "/maps/*", "/brand/*"]
+  }
+}

@@ -17,23 +17,32 @@
         if (raw && JSON.parse(raw).reduceMotion) document.documentElement.classList.add("reduce-motion");
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="./assets/index-DwTeO13F.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BnjgKMgM.css">
+    <script type="module" crossorigin src="./assets/index-CdBvvpKF.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DoHzJbQT.css">
   </head>
   <body>
-    <form id="gate" class="gate metal" hidden>
-      <p class="eyebrow">Unlisted preview</p>
-      <h1>Final Eradication</h1>
-      <p>This preview is unlisted.</p>
-      <label class="field">Password <input id="gate-pass" type="password" autocomplete="current-password" /></label>
+    <form id="gate" class="gate metal plate" hidden>
+      <picture>
+        <source type="image/avif" srcset="./brand/img/lockup-480.avif 480w, ./brand/img/lockup-960.avif 960w" sizes="420px" />
+        <source type="image/webp" srcset="./brand/img/lockup-480.webp 480w, ./brand/img/lockup-960.webp 960w" sizes="420px" />
+        <img src="./brand/img/lockup-480.webp" alt="Final Eradication" width="480" height="101" />
+      </picture>
+      <p class="eyebrow" id="gate-eyebrow">Local session</p>
+      <h1>Local command</h1>
+      <p>Play on this machine. Nothing is sent to a server.</p>
+      <label class="field">Commander name <input id="gate-name" type="text" autocomplete="nickname" /></label>
+      <label class="field" id="gate-pass-label">Password <input id="gate-pass" type="password" autocomplete="current-password" /></label>
       <button type="submit" class="btn btn-primary">Enter</button>
       <p id="gate-err" class="gpu" data-state="bad"></p>
+      <p class="credit">Built by LeHogan Studios</p>
     </form>
     <main id="landing">
       <section class="hero ember-host">
         <div class="layer topo" aria-hidden="true"></div>
         <div class="layer fault" aria-hidden="true"></div>
         <div class="layer haze" aria-hidden="true"></div>
+        <div class="smoke-layer" aria-hidden="true"></div>
+        <div class="embers-layer" aria-hidden="true"></div>
         <header class="topnav metal">
           <div class="brand-lock">
             <a class="lockup-link" href="#top">
@@ -46,135 +55,136 @@
             <p class="credit">Built by LeHogan Studios</p>
           </div>
           <nav class="links" aria-label="Primary">
-            <a href="#factions">Factions</a>
-            <a href="#play">Play</a>
-            <button type="button" id="nav-helper">Helper</button>
-            <a href="#requirements">Requirements</a>
+            <a class="nav-tab" href="#factions">Factions</a>
+            <button class="nav-tab" type="button" id="nav-play">Play</button>
+            <button class="nav-tab" type="button" id="nav-helper">Helper</button>
+            <a class="nav-tab" href="#requirements">Requirements</a>
           </nav>
         </header>
-        <div class="hero-copy">
-          <picture class="wordmark">
-            <source type="image/avif" srcset="./brand/img/wordmark-720.avif 720w, ./brand/img/wordmark-1200.avif 1200w, ./brand/img/wordmark-1600.avif 1600w" sizes="(max-width: 900px) 92vw, 46vw" />
-            <source type="image/webp" srcset="./brand/img/wordmark-720.webp 720w, ./brand/img/wordmark-1200.webp 1200w, ./brand/img/wordmark-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 46vw" />
-            <img src="./brand/img/wordmark-1200.webp" alt="" width="1200" height="336" />
-          </picture>
-          <h1>Play instantly in the browser.</h1>
-          <p class="sub">
-            No install. GPU-rendered lighting, photoreal terrain, and huge unit counts. Start a quick match with friends from a link.
-            It runs on everyday machines, and it is always up to date.
-          </p>
-          <p class="free">Completely free. No download required. Optional free Helper.</p>
-          <div class="btns">
-            <button type="button" class="btn btn-primary" id="hero-helper">Get the free Helper</button>
-            <button type="button" class="btn btn-metal rivet" id="play">Play Now</button>
+        <div class="hero-copy-plate metal">
+          <div class="hero-copy">
+            <picture class="wordmark">
+              <source type="image/avif" srcset="./brand/img/wordmark-720.avif 720w, ./brand/img/wordmark-1200.avif 1200w, ./brand/img/wordmark-1600.avif 1600w" sizes="(max-width: 900px) 92vw, 46vw" />
+              <source type="image/webp" srcset="./brand/img/wordmark-720.webp 720w, ./brand/img/wordmark-1200.webp 1200w, ./brand/img/wordmark-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 46vw" />
+              <img src="./brand/img/wordmark-1200.webp" alt="Final Eradication" width="1200" height="336" />
+            </picture>
+            <h1>Play instantly in the browser.</h1>
+            <p class="sub">
+              No install. GPU-rendered lighting, photoreal terrain, and huge unit counts. Start a quick match with friends from a link.
+              It runs on everyday machines, and it is always up to date.
+            </p>
+            <p class="free">Completely free. No download required. Optional free Helper.</p>
+            <div class="btns">
+              <button type="button" class="btn btn-orange" id="hero-helper">Get the free Helper</button>
+              <button type="button" class="btn btn-blue" id="play">Play Now</button>
+            </div>
+            <p id="gpu" class="gpu" data-state="wait">Checking WebGPU…</p>
           </div>
-          <p id="gpu" class="gpu" data-state="wait">Checking WebGPU…</p>
         </div>
         <div class="hero-art">
-          <div class="bezel metal">
+          <div class="bezel metal hazard-frame">
+            <div class="haz-bar top"></div>
+            <div class="haz-bar bottom"></div>
+            <div class="frame-cable left"></div>
+            <div class="frame-cable right"></div>
+            <div class="bolt tl"></div>
+            <div class="bolt tr"></div>
+            <div class="bolt bl"></div>
+            <div class="bolt br"></div>
+            <picture class="hero-img">
+              <source type="image/avif" srcset="./brand/img/hero-battle-1920.avif" />
+              <source type="image/webp" srcset="./brand/img/hero-battle-1920.webp" />
+              <img src="./brand/img/hero-battle-1920.webp" alt="" width="1920" height="1080" onload="this.closest('.hazard-frame').classList.add('has-art')" />
+            </picture>
             <div class="cap">
-              <b>[ IN-GAME CAPTURE ]</b>
-              <i>Slot for an unedited engine capture · 16:10</i>
+              <b>[ PLACEHOLDER ]</b>
+              <i>Hero image not found · 16:10</i>
             </div>
             <span class="corner tl"></span>
             <span class="corner tr"></span>
             <span class="corner bl"></span>
             <span class="corner br"></span>
+            <span class="lamp tl"></span>
+            <span class="lamp tr"></span>
+            <span class="lamp bl"></span>
+            <span class="lamp br"></span>
           </div>
         </div>
-        <section class="faction-row" id="factions" aria-label="Factions">
-          <article class="em metal">
-            <div class="bar" style="background:#C2551F"></div>
-            <picture>
-              <source type="image/avif" srcset="./brand/img/emblem-korr-256.avif 256w, ./brand/img/emblem-korr-512.avif 512w" sizes="120px" />
-              <source type="image/webp" srcset="./brand/img/emblem-korr-256.webp 256w, ./brand/img/emblem-korr-512.webp 512w" sizes="120px" />
-              <img class="glow-korr" src="./brand/img/emblem-korr-256.webp" alt="" width="256" height="256" />
-            </picture>
-            <div><h3>Korr</h3><p>Fortress. Holds from every angle.</p></div>
-          </article>
-          <article class="em metal">
-            <div class="bar" style="background:#1F9E95"></div>
-            <picture>
-              <source type="image/avif" srcset="./brand/img/emblem-arrum-256.avif 256w, ./brand/img/emblem-arrum-512.avif 512w" sizes="120px" />
-              <source type="image/webp" srcset="./brand/img/emblem-arrum-256.webp 256w, ./brand/img/emblem-arrum-512.webp 512w" sizes="120px" />
-              <img class="glow-arrum" src="./brand/img/emblem-arrum-256.webp" alt="" width="256" height="256" />
-            </picture>
-            <div><h3>Arrum</h3><p>Reach and mobility.</p></div>
-          </article>
-          <article class="em metal">
-            <div class="bar" style="background:#1F4FD8"></div>
-            <picture>
-              <source type="image/avif" srcset="./brand/img/emblem-nexx-256.avif 256w, ./brand/img/emblem-nexx-512.avif 512w" sizes="120px" />
-              <source type="image/webp" srcset="./brand/img/emblem-nexx-256.webp 256w, ./brand/img/emblem-nexx-512.webp 512w" sizes="120px" />
-              <img class="glow-nexx" src="./brand/img/emblem-nexx-256.webp" alt="" width="256" height="256" />
-            </picture>
-            <div><h3>Nexx</h3><p>Information and networks.</p></div>
-          </article>
-          <article class="em metal">
-            <div class="bar" style="background:#5BD13A"></div>
-            <picture>
-              <source type="image/avif" srcset="./brand/img/emblem-vorr-256.avif 256w, ./brand/img/emblem-vorr-512.avif 512w" sizes="120px" />
-              <source type="image/webp" srcset="./brand/img/emblem-vorr-256.webp 256w, ./brand/img/emblem-vorr-512.webp 512w" sizes="120px" />
-              <img class="glow-vorr" src="./brand/img/emblem-vorr-256.webp" alt="" width="256" height="256" />
-            </picture>
-            <div><h3>Vorr</h3><p>Strikes from below.</p></div>
-          </article>
-        </section>
       </section>
-
-      <section class="sec" id="benefits">
-        <h2>In the tab. On the metal.</h2>
-        <div class="benefit-grid">
-          <article class="benefit metal rivet">
-            <h3>Play instantly</h3>
-            <p>The match opens in the browser. No install.</p>
-          </article>
-          <article class="benefit metal rivet">
-            <h3>GPU-rendered</h3>
-            <p>Lighting, photoreal terrain, and huge unit counts.</p>
-          </article>
-          <article class="benefit metal rivet">
-            <h3>A link for friends</h3>
-            <p>Quick matches start from a private link.</p>
-          </article>
-          <article class="benefit metal rivet">
-            <h3>Everyday machines</h3>
-            <p>Built to run on the computer you already have.</p>
-          </article>
-          <article class="benefit metal rivet">
-            <h3>Always up to date</h3>
-            <p>The browser build is the current build.</p>
-          </article>
+      <section class="faction-panel ember-host" id="factions" aria-label="Factions">
+        <div class="smoke-layer" aria-hidden="true"></div>
+        <div class="embers-layer" aria-hidden="true"></div>
+        <div class="faction-slab metal">
+          <svg class="cable-top" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M200,0 C200,80 300,100 400,100 C500,100 600,80 600,0" fill="none" stroke="#2a2a2a" stroke-width="24" stroke-linecap="round" />
+            <path d="M600,0 C600,80 700,100 800,100 C900,100 1000,80 1000,0" fill="none" stroke="#2a2a2a" stroke-width="24" stroke-linecap="round" />
+            <path d="M200,0 C200,80 300,100 400,100 C500,100 600,80 600,0" fill="none" stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" />
+            <path d="M600,0 C600,80 700,100 800,100 C900,100 1000,80 1000,0" fill="none" stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" />
+          </svg>
+          <svg class="cable-left" viewBox="0 0 120 600" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M60,0 C60,150 40,300 60,450 C80,600 60,600 60,600" fill="none" stroke="#2a2a2a" stroke-width="20" stroke-linecap="round" />
+            <path d="M60,0 C60,150 40,300 60,450 C80,600 60,600 60,600" fill="none" stroke="#1a1a1a" stroke-width="14" stroke-linecap="round" />
+          </svg>
+          <svg class="cable-right" viewBox="0 0 120 600" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M60,0 C60,150 80,300 60,450 C40,600 60,600 60,600" fill="none" stroke="#2a2a2a" stroke-width="20" stroke-linecap="round" />
+            <path d="M60,0 C60,150 80,300 60,450 C40,600 60,600 60,600" fill="none" stroke="#1a1a1a" stroke-width="14" stroke-linecap="round" />
+          </svg>
+          <svg class="cable-bottom" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M400,120 C400,40 500,20 600,20 C700,20 800,40 800,120" fill="none" stroke="#2a2a2a" stroke-width="22" stroke-linecap="round" />
+            <path d="M400,120 C400,40 500,20 600,20 C700,20 800,40 800,120" fill="none" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round" />
+          </svg>
+          <div class="bullet-hole" style="top: 10%; left: 15%;"></div>
+          <div class="bullet-hole" style="top: 30%; right: 10%;"></div>
+          <div class="bullet-hole" style="bottom: 20%; left: 25%;"></div>
+          <div class="bullet-hole" style="top: 50%; left: 80%;"></div>
+          <div class="faction-mounts">
+            <div class="emblem-mount korr-mount">
+              <div class="emblem-glow glow-korr">
+                <picture>
+                  <source type="image/avif" srcset="./brand/img/emblem-korr-1024.avif 1024w, ./brand/img/emblem-korr-512.avif 512w, ./brand/img/emblem-korr-256.avif 256w" sizes="(max-width: 900px) 45vw, 400px" />
+                  <source type="image/webp" srcset="./brand/img/emblem-korr-1024.webp 1024w, ./brand/img/emblem-korr-512.webp 512w, ./brand/img/emblem-korr-256.webp 256w" sizes="(max-width: 900px) 45vw, 400px" />
+                  <img src="./brand/img/emblem-korr-512.webp" alt="Korr" width="512" height="512" />
+                </picture>
+              </div>
+              <h3>Korr</h3>
+              <p>FORTRESS. HOLDS FROM EVERY ANGLE.</p>
+            </div>
+            <div class="emblem-mount arrum-mount">
+              <div class="emblem-glow glow-arrum">
+                <picture>
+                  <source type="image/avif" srcset="./brand/img/emblem-arrum-1024.avif 1024w, ./brand/img/emblem-arrum-512.avif 512w, ./brand/img/emblem-arrum-256.avif 256w" sizes="(max-width: 900px) 45vw, 400px" />
+                  <source type="image/webp" srcset="./brand/img/emblem-arrum-1024.webp 1024w, ./brand/img/emblem-arrum-512.webp 512w, ./brand/img/emblem-arrum-256.webp 256w" sizes="(max-width: 900px) 45vw, 400px" />
+                  <img src="./brand/img/emblem-arrum-512.webp" alt="Arrum" width="512" height="512" />
+                </picture>
+              </div>
+              <h3>Arrum</h3>
+              <p>REACH AND MOBILITY.</p>
+            </div>
+            <div class="emblem-mount nexx-mount">
+              <div class="emblem-glow glow-nexx">
+                <picture>
+                  <source type="image/avif" srcset="./brand/img/emblem-nexx-1024.avif 1024w, ./brand/img/emblem-nexx-512.avif 512w, ./brand/img/emblem-nexx-256.avif 256w" sizes="(max-width: 900px) 45vw, 400px" />
+                  <source type="image/webp" srcset="./brand/img/emblem-nexx-1024.webp 1024w, ./brand/img/emblem-nexx-512.webp 512w, ./brand/img/emblem-nexx-256.webp 256w" sizes="(max-width: 900px) 45vw, 400px" />
+                  <img src="./brand/img/emblem-nexx-512.webp" alt="Nexx" width="512" height="512" />
+                </picture>
+              </div>
+              <h3>Nexx</h3>
+              <p>INFORMATION AND NETWORKS.</p>
+            </div>
+            <div class="emblem-mount vorr-mount">
+              <div class="emblem-glow glow-vorr">
+                <picture>
+                  <source type="image/avif" srcset="./brand/img/emblem-vorr-1024.avif 1024w, ./brand/img/emblem-vorr-512.avif 512w, ./brand/img/emblem-vorr-256.avif 256w" sizes="(max-width: 900px) 45vw, 400px" />
+                  <source type="image/webp" srcset="./brand/img/emblem-vorr-1024.webp 1024w, ./brand/img/emblem-vorr-512.webp 512w, ./brand/img/emblem-vorr-256.webp 256w" sizes="(max-width: 900px) 45vw, 400px" />
+                  <img src="./brand/img/emblem-vorr-512.webp" alt="Vorr" width="512" height="512" />
+                </picture>
+              </div>
+              <h3>Vorr</h3>
+              <p>STRIKES FROM BELOW.</p>
+            </div>
+          </div>
         </div>
       </section>
-
-      <section class="sec" id="requirements">
-        <h2>System requirements</h2>
-        <p class="lead">A WebGPU-capable browser.</p>
-        <p class="sub">Current Chrome, Edge, or another browser with WebGPU turned on. Everyday machines run the match. A discrete GPU gives large battles more room.</p>
-        <p id="gpu-req" class="gpu" data-state="wait">Checking WebGPU…</p>
-      </section>
-
-      <section class="sec hours" aria-labelledby="hours-title">
-        <div class="layer topo bone" aria-hidden="true"></div>
-        <h2 id="hours-title">Made by players who've spent <em>thousands of hours</em> in…</h2>
-        <p class="lead">The games that taught us what a great battle feels like. Final Eradication is our own answer: original factions, original art, no unit cap.</p>
-        <div class="tagrow">Strategy</div>
-        <div class="mq" id="mq-strategy" aria-hidden="true"><div class="trk"></div></div>
-        <div class="tagrow">RPG</div>
-        <div class="mq r" id="mq-rpg"><div class="trk"></div></div>
-        <div class="tagrow">Korea · China · Japan</div>
-        <div class="mq" id="mq-region"><div class="trk"></div></div>
-      </section>
-
-      <footer class="carbon">
-        <div>
-          <img src="./brand/img/lockup-480.webp" alt="Final Eradication" width="280" height="59" />
-          <p class="credit">Built by LeHogan Studios</p>
-        </div>
-        <p class="disclaimer">All game names are trademarks of their respective owners. Final Eradication is not affiliated with or endorsed by them.</p>
-        <p class="credit" id="footer-gfx">Checking the adapter…</p>
-      </footer>
     </main>
 
     <section id="screen-menu" class="screen menu ember-host" hidden>
